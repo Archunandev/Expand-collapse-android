@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/first1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First one"
+            android:textSize="22sp"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/column1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first1"
+        android:layout_marginTop="5dp"
+        android:background="#000"
+        android:padding="1dp">
+
+        <Button
+            android:id="@+id/expandButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+            android:drawableTint="#fff"
+            android:text="Toggle" />
+
+    </LinearLayout>
+
+
+    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+        android:id="@+id/expandableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/column1"
+        android:background="#fff"
+        android:visibility="visible"
+        app:ael_duration="100"
+        app:ael_interpolator="bounce"
+        android:layout_marginTop="12dp"
+        app:ael_orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/column1ass1.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expandableLayout"
+            android:background="#000"
+            android:padding="1dp">
+
+            <Button
+                android:id="@+id/expandButtonassi1.1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:drawableTint="#fff"
+                android:text="Toggle" />
+
+        </LinearLayout>
+
+    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout1a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="152dp"
+            android:visibility="visible"
+            app:ael_duration="100"
+            app:ael_interpolator="bounce"
+            app:ael_orientation="vertical">
+
+            <TextView
+                android:id="@+id/firstone1atext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expandableLayout1a"
+                android:text="First one 1 a"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@id/firstone1atext"
+                android:background="#FF9800"
+                android:textColor="#fff"
+                android:hint="Wrote something here..."
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textColorHint="#fff"/>
+
+
+    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+</RelativeLayout>
